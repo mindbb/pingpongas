@@ -187,24 +187,24 @@
     <div class="container">
       <p class="eyebrow"><span lang="lt">Rezultatai</span><span lang="en">Results</span></p>
       <h2><span lang="lt">Turnyrų istorija</span><span lang="en">Tournament history</span></h2>
-      <div class="table-wrap">
-        <table class="results">
-          <thead>
-            <tr>
-              <th><span lang="lt">Data</span><span lang="en">Date</span></th>
-              <th><span lang="lt">Turnyras</span><span lang="en">Tournament</span></th>
-              <th>🥇 <span lang="lt">Čempionas</span><span lang="en">Champion</span></th>
-              <th>🥈 <span lang="lt">Vicečempionas</span><span lang="en">Runner-up</span></th>
-              <th><span lang="lt">Dalyviai</span><span lang="en">Players</span></th>
-            </tr>
-          </thead>
-          <tbody>
-            <!-- To add a result, copy this line above the "coming soon" row, fill it in, then delete the "coming soon" row:
-            <tr><td>2026-12</td><td><span lang="lt">Turnyro pavadinimas</span><span lang="en">Tournament name</span></td><td>Vardas Pavardė</td><td>Vardas Pavardė</td><td>16</td></tr>
+      <!-- To add a tournament: copy one <article class="past"> block to the top of the list and change it.
+           Winner lines (🥇 / 🥈) are optional — delete the <ul class="podium"> if you don't have them. -->
+      <div class="history">
+        <article class="past">
+          <a href="images/tournament-2026-06-20.jpg" target="_blank">
+            <img src="images/tournament-2026-06-20.jpg" alt="Turnyro dalyviai su medaliais ir taure" loading="lazy">
+          </a>
+          <div class="past-body">
+            <p class="past-date"><span lang="lt">2026 m. birželio 20 d.</span><span lang="en">June 20, 2026</span></p>
+            <h3><span lang="lt">Klubo turnyras</span><span lang="en">Club tournament</span></h3>
+            <!--
+            <ul class="podium">
+              <li>🥇 Vardas Pavardė</li>
+              <li>🥈 Vardas Pavardė</li>
+            </ul>
             -->
-            <tr class="empty"><td colspan="5"><span lang="lt">Rezultatai bus paskelbti netrukus.</span><span lang="en">Results coming soon.</span></td></tr>
-          </tbody>
-        </table>
+          </div>
+        </article>
       </div>
     </div>
   </section>
