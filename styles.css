@@ -246,3 +246,31 @@ h3 { margin: 0 0 .25em; font-size: 1.05rem; }
   background: linear-gradient(to bottom, var(--yellow) 0 6px, var(--green) 6px 12px, var(--red) 12px 18px);
 }
 .site-footer { padding-top: 40px; }
+
+/* Registration dialog */
+.register {
+  border: 0; border-radius: var(--radius); padding: 0; width: min(440px, calc(100% - 32px));
+  box-shadow: 0 30px 80px rgba(0,0,0,.45); color: var(--text); background: #fff;
+}
+.register::backdrop { background: rgba(15, 26, 20, .7); backdrop-filter: blur(3px); }
+.register form { position: relative; display: grid; gap: 14px; padding: 28px 24px 24px; border-top: 6px solid var(--yellow); }
+.register h3 { font-size: 1.2rem; margin: 0 0 4px; padding-right: 32px; }
+.register .eyebrow { margin: 0; }
+.register label { display: grid; gap: 6px; font-weight: 600; font-size: .9rem; }
+.register input {
+  font: inherit; font-weight: 400; padding: 12px 14px; border: 1.5px solid #cfd6d1; border-radius: 10px; background: #fbfaf6;
+}
+.register input:focus { outline: none; border-color: var(--green); box-shadow: 0 0 0 3px rgba(0,106,68,.15); }
+.register small { font-weight: 400; color: var(--muted); }
+.register .btn { border: 0; cursor: pointer; font: inherit; font-weight: 700; justify-self: stretch; }
+.register .btn:disabled { opacity: .6; cursor: wait; }
+.register-close {
+  position: absolute; top: 14px; right: 14px; width: 34px; height: 34px; border-radius: 50%;
+  border: 0; background: var(--tint); font-size: 1.4rem; line-height: 1; cursor: pointer; color: var(--text);
+}
+.register-msg { margin: 0; min-height: 1.4em; font-size: .9rem; }
+.register-msg.ok { color: var(--green); font-weight: 700; }
+.register-msg.error { color: var(--red); font-weight: 600; }
+.hp { position: absolute; left: -9999px; }
+button.btn { border: 0; cursor: pointer; font: inherit; font-weight: 700; }
+button.btn-small { font-size: .9rem; }
