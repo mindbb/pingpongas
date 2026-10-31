@@ -39,8 +39,10 @@ links.addEventListener('click', (e) => {
 // Footer year
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// Tournament registration form — entries are emailed to the club
+// Tournament registration form — entries are emailed to the club via web3forms.com
 const CLUB_EMAIL = 'pingpongmb@gmail.com';
+// Public Web3Forms access key for CLUB_EMAIL (safe to keep in page code)
+const WEB3FORMS_KEY = '24944552-764e-4948-b612-1a6bba1b1033';
 const dialog = document.getElementById('register');
 const form = document.getElementById('register-form');
 const msg = form.querySelector('.register-msg');
@@ -79,23 +81,25 @@ form.addEventListener('submit', async (e) => {
   msg.textContent = t('sending');
   msg.className = 'register-msg';
   try {
-    const res = await fetch('https://formsubmit.co/ajax/' + CLUB_EMAIL, {
+    const res = await fetch('https://api.web3forms.com/submit', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
       body: JSON.stringify({
-        _subject: 'Registracija: ' + form.dataset.tournament + ' — ' + first + ' ' + last,
-        _template: 'table',
+        access_key: WEB3FORMS_KEY,
+        subject: 'Registracija: ' + form.dataset.tournament + ' — ' + first + ' ' + last,
+        from_name: 'pingpongas.com',
+        // lets you press Reply in Gmail to answer the player directly
+        ...(email ? { replyto: email } : {}),
         Turnyras: form.dataset.tournament,
         Vardas: first,
         'Pavardė': last,
-        Reitingas: form.rating.value.trim() || '—',
         Telefonas: phone || '—',
-        // "email" lets you press Reply in Gmail to answer the player directly
-        ...(email ? { email } : { 'El. paštas': '—' }),
+        'El. paštas': email || '—',
+        Reitingas: form.rating.value.trim() || '—',
       }),
     });
     const data = await res.json().catch(() => ({}));
-    if (!res.ok || data.success === 'false' || data.success === false) throw new Error(data.message || res.status);
+    if (!res.ok || !data.success) throw new Error(data.message || res.status);
     msg.textContent = t('ok');
     msg.className = 'register-msg ok';
     setTimeout(() => dialog.close(), 2500);
