@@ -46,8 +46,8 @@ const form = document.getElementById('register-form');
 const msg = form.querySelector('.register-msg');
 const submitBtn = form.querySelector('[type="submit"]');
 const text = {
-  lt: { required: 'Įveskite vardą, pavardę ir telefoną.', badEmail: 'Patikrinkite el. pašto adresą.', sending: 'Siunčiama…', ok: 'Ačiū! Jūsų registracija gauta.', fail: 'Nepavyko išsiųsti. Parašykite mums: ' },
-  en: { required: 'Please enter your first name, last name and phone.', badEmail: 'Please check the email address.', sending: 'Sending…', ok: 'Thank you! Your registration was received.', fail: 'Could not send. Please email us: ' },
+  lt: { required: 'Įveskite vardą ir pavardę.', contact: 'Nurodykite telefoną arba el. paštą.', badEmail: 'Patikrinkite el. pašto adresą.', sending: 'Siunčiama…', ok: 'Ačiū! Jūsų registracija gauta.', fail: 'Nepavyko išsiųsti. Parašykite mums: ' },
+  en: { required: 'Please enter your first and last name.', contact: 'Please give a phone number or an email.', badEmail: 'Please check the email address.', sending: 'Sending…', ok: 'Thank you! Your registration was received.', fail: 'Could not send. Please email us: ' },
 };
 const t = (k) => text[document.documentElement.getAttribute('data-lang')][k];
 
@@ -70,7 +70,8 @@ form.addEventListener('submit', async (e) => {
   const last = form.last_name.value.trim();
   const phone = form.phone.value.trim();
   const email = form.email.value.trim();
-  if (!first || !last || !phone) { msg.textContent = t('required'); msg.className = 'register-msg error'; return; }
+  if (!first || !last) { msg.textContent = t('required'); msg.className = 'register-msg error'; return; }
+  if (!phone && !email) { msg.textContent = t('contact'); msg.className = 'register-msg error'; return; }
   if (email && !form.email.checkValidity()) { msg.textContent = t('badEmail'); msg.className = 'register-msg error'; return; }
   if (form._honey.value) return;
 
@@ -88,7 +89,7 @@ form.addEventListener('submit', async (e) => {
         Vardas: first,
         'Pavardė': last,
         Reitingas: form.rating.value.trim() || '—',
-        Telefonas: phone,
+        Telefonas: phone || '—',
         // "email" lets you press Reply in Gmail to answer the player directly
         ...(email ? { email } : { 'El. paštas': '—' }),
       }),
