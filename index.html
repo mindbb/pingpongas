@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=3">
+  <link rel="stylesheet" href="styles.css?v=4">
 </head>
 <body>
   <!--
@@ -293,6 +293,10 @@
         <input name="first_name" required autocomplete="given-name"></label>
       <label><span lang="lt">Pavardė</span><span lang="en">Last name</span>
         <input name="last_name" required autocomplete="family-name"></label>
+      <label><span lang="lt">Telefonas</span><span lang="en">Phone</span>
+        <input name="phone" type="tel" required autocomplete="tel"></label>
+      <label><span lang="lt">El. paštas</span><span lang="en">Email</span>
+        <input name="email" type="email" autocomplete="email"></label>
       <label><span lang="lt">Reitingas</span><span lang="en">Rating</span>
         <input name="rating" inputmode="numeric" maxlength="6">
         <small><span lang="lt">Jei neturite reitingo, palikite tuščią.</span><span lang="en">Leave empty if you don't have a rating.</span></small></label>
@@ -302,6 +306,6 @@
     </form>
   </dialog>
 
-  <script src="script.js?v=3"></script>
+  <script src="script.js?v=4"></script>
 </body>
 </html>
