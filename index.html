@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="lt" data-lang="lt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pingpongas — Čikagos lietuvių stalo teniso klubas</title>
+  <meta name="description" content="Pingpongas — Čikagos lietuvių stalo teniso klubas. Chicago Lithuanian Table Tennis Club: open play, coaching and tournaments.">
+  <!-- Pick language before the page draws, so there is no flash of the wrong one -->
+  <script>
+    (function () {
+      var lang;
+      try { lang = localStorage.getItem('lang'); } catch (e) {}
+      if (lang !== 'lt' && lang !== 'en') {
+        lang = (navigator.language || '').toLowerCase().indexOf('lt') === 0 ? 'lt' : 'en';
+      }
+      document.documentElement.setAttribute('data-lang', lang);
+      document.documentElement.lang = lang;
+    })();
+  </script>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!--
+    HOW TO EDIT TEXT: every piece of text comes in a pair —
+      <span lang="lt">Lietuviškai</span><span lang="en">In English</span>
+    Change both. The LT / EN buttons show one and hide the other.
+  -->
+
+  <!-- ===== Header ===== -->
+  <header class="site-header" id="top">
+    <div class="container nav">
+      <a href="#top" class="brand">
+        <span class="brand-ball" aria-hidden="true"></span>
+        <span>PINGPONGAS</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#about"><span lang="lt">Apie mus</span><span lang="en">About</span></a>
+        <a href="#hours"><span lang="lt">Darbo laikas</span><span lang="en">Hours</span></a>
+        <a href="#upcoming"><span lang="lt">Turnyrai</span><span lang="en">Tournaments</span></a>
+        <a href="#history"><span lang="lt">Istorija</span><span lang="en">History</span></a>
+        <a href="#gallery"><span lang="lt">Nuotraukos</span><span lang="en">Photos</span></a>
+        <a href="#contact" class="btn btn-small"><span lang="lt">Kontaktai</span><span lang="en">Visit us</span></a>
+      </nav>
+      <div class="lang-switch" role="group" aria-label="Kalba / Language">
+        <button type="button" data-set-lang="lt">LT</button>
+        <button type="button" data-set-lang="en">EN</button>
+      </div>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  <section class="hero">
+    <div class="hero-flag" aria-hidden="true"><span></span><span></span><span></span></div>
+    <div class="container hero-inner">
+      <p class="eyebrow"><span lang="lt">Sveiki atvykę! · Čikaga, IL</span><span lang="en">Welcome! · Chicago, IL</span></p>
+      <h1>
+        <span lang="lt">Čikagos lietuvių<br><em>stalo teniso klubas</em></span>
+        <span lang="en">Chicago Lithuanian<br><em>Table Tennis Club</em></span>
+      </h1>
+      <p class="lead">
+        <span lang="lt">Greiti kamuoliukai, draugiški žmonės ir lietuviška dvasia prie kiekvieno stalo.
+          Pradedantieji, lygos žaidėjai ir veteranai — laukiami visi.</span>
+        <span lang="en">Fast rallies, friendly people, and a little Lithuanian spirit at every table.
+          Beginners, league players and veterans — everyone is welcome.</span>
+      </p>
+      <div class="hero-cta">
+        <a href="#upcoming" class="btn"><span lang="lt">Artėjantys turnyrai</span><span lang="en">Upcoming tournaments</span></a>
+        <a href="#hours" class="btn btn-ghost"><span lang="lt">Darbo laikas</span><span lang="en">Club hours</span></a>
+      </div>
+      <ul class="stats">
+        <li><strong>20+</strong><span lang="lt">metų žaidimo</span><span lang="en">years of play</span></li>
+        <li><strong>6</strong><span lang="lt">varžybiniai stalai</span><span lang="en">competition tables</span></li>
+        <li><strong>100+</strong><span lang="lt">narių</span><span lang="en">members</span></li>
+      </ul>
+    </div>
+    <div class="hero-ball" aria-hidden="true"></div>
+  </section>
+
+  <!-- ===== About ===== -->
+  <section class="section" id="about">
+    <div class="container about">
+      <div>
+        <p class="eyebrow"><span lang="lt">Apie mus</span><span lang="en">About us</span></p>
+        <h2><span lang="lt">Daugiau nei žaidimas</span><span lang="en">More than a game</span></h2>
+        <p>
+          <span lang="lt">Pingpongas suburia Čikagos apylinkių lietuvių bendruomenę ir visus, kurie myli stalo tenisą.
+            Kelis vakarus per savaitę vyksta laisvas žaidimas, treniruotės jaunimui ir suaugusiems,
+            o ištisus metus — klubo turnyrai.</span>
+          <span lang="en">Pingpongas brings together the Lithuanian community of Chicagoland and everyone who loves
+            table tennis. We host open play several evenings a week, coaching for juniors and adults,
+            and club tournaments throughout the year.</span>
+        </p>
+        <p>
+          <span lang="lt">Atsineškite savo raketę — arba pasiskolinkite mūsų — ir ateikite pažaisti.</span>
+          <span lang="en">Bring your paddle — or borrow one of ours — and come play.</span>
+        </p>
+      </div>
+      <ul class="features">
+        <li><span class="ico">🏓</span><div>
+          <h3><span lang="lt">Laisvas žaidimas</span><span lang="en">Open play</span></h3>
+          <p><span lang="lt">Užeikite ir žaiskite su įvairaus lygio žaidėjais.</span><span lang="en">Drop in and play with players of every level.</span></p>
+        </div></li>
+        <li><span class="ico">🎯</span><div>
+          <h3><span lang="lt">Treniruotės</span><span lang="en">Coaching</span></h3>
+          <p><span lang="lt">Grupinės treniruotės jaunimui ir suaugusiems.</span><span lang="en">Group sessions for juniors and adults.</span></p>
+        </div></li>
+        <li><span class="ico">🏆</span><div>
+          <h3><span lang="lt">Turnyrai</span><span lang="en">Tournaments</span></h3>
+          <p><span lang="lt">Klubo taurės, dvejetų vakarai ir tarpklubinės varžybos.</span><span lang="en">Club cups, doubles nights and inter-club matches.</span></p>
+        </div></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== Hours ===== -->
+  <section class="section section-dark" id="hours">
+    <div class="container">
+      <p class="eyebrow"><span lang="lt">Kada atvykti</span><span lang="en">When to come</span></p>
+      <h2><span lang="lt">Darbo laikas</span><span lang="en">Club hours</span></h2>
+      <div class="hours-grid">
+        <div class="day">
+          <h3><span lang="lt">Pirmadienis</span><span lang="en">Monday</span></h3>
+          <p class="closed"><span lang="lt">Uždaryta</span><span lang="en">Closed</span></p>
+        </div>
+        <div class="day">
+          <h3><span lang="lt">Antradienis</span><span lang="en">Tuesday</span></h3>
+          <p><span lang="lt">18:00 – 22:00</span><span lang="en">6:00 – 10:00 PM</span></p>
+          <small><span lang="lt">Laisvas žaidimas</span><span lang="en">Open play</span></small>
+        </div>
+        <div class="day">
+          <h3><span lang="lt">Trečiadienis</span><span lang="en">Wednesday</span></h3>
+          <p><span lang="lt">18:00 – 22:00</span><span lang="en">6:00 – 10:00 PM</span></p>
+          <small><span lang="lt">Treniruotės + laisvas žaidimas</span><span lang="en">Coaching + open play</span></small>
+        </div>
+        <div class="day">
+          <h3><span lang="lt">Ketvirtadienis</span><span lang="en">Thursday</span></h3>
+          <p><span lang="lt">18:00 – 22:00</span><span lang="en">6:00 – 10:00 PM</span></p>
+          <small><span lang="lt">Laisvas žaidimas</span><span lang="en">Open play</span></small>
+        </div>
+        <div class="day">
+          <h3><span lang="lt">Penktadienis</span><span lang="en">Friday</span></h3>
+          <p><span lang="lt">18:00 – 23:00</span><span lang="en">6:00 – 11:00 PM</span></p>
+          <small><span lang="lt">Lygos vakaras</span><span lang="en">League night</span></small>
+        </div>
+        <div class="day highlight">
+          <h3><span lang="lt">Šeštadienis</span><span lang="en">Saturday</span></h3>
+          <p><span lang="lt">10:00 – 16:00</span><span lang="en">10:00 AM – 4:00 PM</span></p>
+          <small><span lang="lt">Jaunimas · Turnyrai</span><span lang="en">Juniors · Tournaments</span></small>
+        </div>
+        <div class="day">
+          <h3><span lang="lt">Sekmadienis</span><span lang="en">Sunday</span></h3>
+          <p><span lang="lt">12:00 – 17:00</span><span lang="en">12:00 – 5:00 PM</span></p>
+          <small><span lang="lt">Laisvas žaidimas</span><span lang="en">Open play</span></small>
+        </div>
+      </div>
+      <p class="note">
+        <span lang="lt">Švenčių ir turnyrų dienomis darbo laikas gali keistis — žiūrėkite artėjančius renginius žemiau.</span>
+        <span lang="en">Hours may change on holidays and tournament days — check upcoming events below.</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== Upcoming tournaments ===== -->
+  <section class="section" id="upcoming">
+    <div class="container">
+      <p class="eyebrow"><span lang="lt">Kalendorius</span><span lang="en">Calendar</span></p>
+      <h2><span lang="lt">Artėjantys turnyrai</span><span lang="en">Upcoming tournaments</span></h2>
+      <div class="events">
+        <article class="event">
+          <div class="date"><span lang="lt">LAPKR</span><span lang="en">NOV</span><strong>22</strong></div>
+          <div class="event-body">
+            <h3><span lang="lt">Rudens klubo taurė</span><span lang="en">Autumn Club Cup</span></h3>
+            <p><span lang="lt">Vienetai, reitingo grupės. Grupių etapas, po to atkrintamosios.</span>
+               <span lang="en">Singles, rated divisions. Round robin groups followed by knockout.</span></p>
+            <ul class="meta">
+              <li><span lang="lt">Pradžia 10:00</span><span lang="en">Starts 10:00 AM</span></li>
+              <li><span lang="lt">Mokestis $20</span><span lang="en">Entry $20</span></li>
+            </ul>
+          </div>
+          <a href="#contact" class="btn btn-small"><span lang="lt">Registruotis</span><span lang="en">Register</span></a>
+        </article>
+        <article class="event">
+          <div class="date"><span lang="lt">GRUOD</span><span lang="en">DEC</span><strong>13</strong></div>
+          <div class="event-body">
+            <h3><span lang="lt">Kalėdinis dvejetų vakaras</span><span lang="en">Christmas Doubles Night</span></h3>
+            <p><span lang="lt">Dvejetai su atsitiktiniais partneriais, kūčiukai ir gera kompanija.</span>
+               <span lang="en">Random-partner doubles, kūčiukai and good company.</span></p>
+            <ul class="meta">
+              <li><span lang="lt">Pradžia 18:00</span><span lang="en">Starts 6:00 PM</span></li>
+              <li><span lang="lt">Mokestis $10</span><span lang="en">Entry $10</span></li>
+            </ul>
+          </div>
+          <a href="#contact" class="btn btn-small"><span lang="lt">Registruotis</span><span lang="en">Register</span></a>
+        </article>
+        <article class="event">
+          <div class="date"><span lang="lt">VAS</span><span lang="en">FEB</span><strong>16</strong></div>
+          <div class="event-body">
+            <h3><span lang="lt">Vasario 16-osios atvirasis turnyras</span><span lang="en">Vasario 16 Independence Day Open</span></h3>
+            <p><span lang="lt">Didžiausias metų renginys, skirtas Lietuvos valstybės atkūrimo dienai.</span>
+               <span lang="en">Our biggest event of the year, celebrating Lithuania’s Independence Day.</span></p>
+            <ul class="meta">
+              <li><span lang="lt">Pradžia 9:00</span><span lang="en">Starts 9:00 AM</span></li>
+              <li><span lang="lt">Mokestis $30</span><span lang="en">Entry $30</span></li>
+            </ul>
+          </div>
+          <a href="#contact" class="btn btn-small"><span lang="lt">Registruotis</span><span lang="en">Register</span></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Tournament history ===== -->
+  <section class="section section-tint" id="history">
+    <div class="container">
+      <p class="eyebrow"><span lang="lt">Rezultatai</span><span lang="en">Results</span></p>
+      <h2><span lang="lt">Turnyrų istorija</span><span lang="en">Tournament history</span></h2>
+      <div class="table-wrap">
+        <table class="results">
+          <thead>
+            <tr>
+              <th><span lang="lt">Data</span><span lang="en">Date</span></th>
+              <th><span lang="lt">Turnyras</span><span lang="en">Tournament</span></th>
+              <th>🥇 <span lang="lt">Čempionas</span><span lang="en">Champion</span></th>
+              <th>🥈 <span lang="lt">Vicečempionas</span><span lang="en">Runner-up</span></th>
+              <th><span lang="lt">Dalyviai</span><span lang="en">Players</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>2026-09</td><td><span lang="lt">Vasaros uždarymo taurė</span><span lang="en">Summer Closing Cup</span></td><td>Name Surname</td><td>Name Surname</td><td>32</td></tr>
+            <tr><td>2026-06</td><td><span lang="lt">Joninių dvejetai</span><span lang="en">Joninės Doubles</span></td><td>Name / Name</td><td>Name / Name</td><td>24</td></tr>
+            <tr><td>2026-03</td><td><span lang="lt">Kovo 11-osios taurė</span><span lang="en">March 11 Cup</span></td><td>Name Surname</td><td>Name Surname</td><td>28</td></tr>
+            <tr><td>2026-02</td><td><span lang="lt">Vasario 16-osios atvirasis turnyras</span><span lang="en">Vasario 16 Open</span></td><td>Name Surname</td><td>Name Surname</td><td>40</td></tr>
+            <tr><td>2025-11</td><td><span lang="lt">Rudens klubo taurė</span><span lang="en">Autumn Club Cup</span></td><td>Name Surname</td><td>Name Surname</td><td>30</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Gallery ===== -->
+  <section class="section" id="gallery">
+    <div class="container">
+      <p class="eyebrow"><span lang="lt">Galerija</span><span lang="en">Gallery</span></p>
+      <h2><span lang="lt">Nuotraukos</span><span lang="en">Photos</span></h2>
+      <!-- Replace each .ph div with: <img src="images/your-photo.jpg" alt="Description"> -->
+      <div class="gallery">
+        <figure class="g-wide"><div class="ph ph-1"><span lang="lt">Turnyro diena</span><span lang="en">Tournament day</span></div></figure>
+        <figure><div class="ph ph-2"><span lang="lt">Jaunimas</span><span lang="en">Juniors</span></div></figure>
+        <figure><div class="ph ph-3"><span lang="lt">Dvejetų vakaras</span><span lang="en">Doubles night</span></div></figure>
+        <figure><div class="ph ph-4"><span lang="lt">Klubo čempionai</span><span lang="en">Club champions</span></div></figure>
+        <figure><div class="ph ph-2"><span lang="lt">Treniruotė</span><span lang="en">Training night</span></div></figure>
+        <figure class="g-wide"><div class="ph ph-5"><span lang="lt">Mūsų komanda</span><span lang="en">Our team</span></div></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Contact ===== -->
+  <section class="section section-dark" id="contact">
+    <div class="container contact">
+      <div>
+        <p class="eyebrow"><span lang="lt">Kontaktai</span><span lang="en">Contact</span></p>
+        <h2><span lang="lt">Ateikite pažaisti</span><span lang="en">Come play with us</span></h2>
+        <p class="lead">
+          <span lang="lt">Nauji žaidėjai visada laukiami. Pirmas apsilankymas — nemokamas!</span>
+          <span lang="en">New players are always welcome. Your first visit is free!</span>
+        </p>
+        <ul class="contact-list">
+          <li><strong><span lang="lt">Adresas</span><span lang="en">Address</span></strong>Your club address, Chicago, IL</li>
+          <li><strong><span lang="lt">El. paštas</span><span lang="en">Email</span></strong><a href="mailto:info@pingpongas.com">info@pingpongas.com</a></li>
+          <li><strong><span lang="lt">Telefonas</span><span lang="en">Phone</span></strong>(000) 000-0000</li>
+          <li><strong>Facebook</strong><a href="#">facebook.com/pingpongas</a></li>
+        </ul>
+      </div>
+      <div class="map">
+        <!-- Replace q=Chicago with your club address -->
+        <iframe title="Map" loading="lazy" src="https://www.google.com/maps?q=Chicago,IL&output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span>© <span id="year"></span> Pingpongas ·
+        <span lang="lt">Čikagos lietuvių stalo teniso klubas</span><span lang="en">Chicago Lithuanian Table Tennis Club</span></span>
+      <span class="flag-mini" aria-hidden="true"><i></i><i></i><i></i></span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
