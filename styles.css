@@ -274,3 +274,4 @@ h3 { margin: 0 0 .25em; font-size: 1.05rem; }
 .hp { position: absolute; left: -9999px; }
 button.btn { border: 0; cursor: pointer; font: inherit; font-weight: 700; }
 button.btn-small { font-size: .9rem; }
+.register-why { display: block; margin-top: 6px; font-weight: 400; color: var(--muted); }

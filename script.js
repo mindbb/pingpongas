@@ -93,12 +93,17 @@ form.addEventListener('submit', async (e) => {
     msg.className = 'register-msg ok';
     setTimeout(() => dialog.close(), 2500);
   } catch (err) {
+    console.error('Registration failed:', err);
     msg.innerHTML = '';
     msg.append(t('fail'));
     const a = document.createElement('a');
     a.href = 'mailto:' + CLUB_EMAIL;
     a.textContent = CLUB_EMAIL;
     msg.append(a);
+    const why = document.createElement('small');
+    why.className = 'register-why';
+    why.textContent = String(err.message || err);
+    msg.append(why);
     msg.className = 'register-msg error';
     submitBtn.disabled = false;
   }
