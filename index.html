@@ -10,9 +10,7 @@
     (function () {
       var lang;
       try { lang = localStorage.getItem('lang'); } catch (e) {}
-      if (lang !== 'lt' && lang !== 'en') {
-        lang = (navigator.language || '').toLowerCase().indexOf('lt') === 0 ? 'lt' : 'en';
-      }
+      if (lang !== 'lt' && lang !== 'en') lang = 'lt';
       document.documentElement.setAttribute('data-lang', lang);
       document.documentElement.lang = lang;
     })();
@@ -91,11 +89,9 @@
         <h2><span lang="lt">Daugiau nei žaidimas</span><span lang="en">More than a game</span></h2>
         <p>
           <span lang="lt">Pingpongas suburia Čikagos apylinkių lietuvių bendruomenę ir visus, kurie myli stalo tenisą.
-            Kelis vakarus per savaitę vyksta laisvas žaidimas, treniruotės jaunimui ir suaugusiems,
-            o ištisus metus — klubo turnyrai.</span>
+            Susitinkame kiekvieną ketvirtadienio vakarą pažaisti, o ištisus metus rengiame klubo turnyrus.</span>
           <span lang="en">Pingpongas brings together the Lithuanian community of Chicagoland and everyone who loves
-            table tennis. We host open play several evenings a week, coaching for juniors and adults,
-            and club tournaments throughout the year.</span>
+            table tennis. We meet every Thursday evening to play, and host club tournaments throughout the year.</span>
         </p>
         <p>
           <span lang="lt">Atsineškite savo raketę — arba pasiskolinkite mūsų — ir ateikite pažaisti.</span>
@@ -107,9 +103,9 @@
           <h3><span lang="lt">Laisvas žaidimas</span><span lang="en">Open play</span></h3>
           <p><span lang="lt">Užeikite ir žaiskite su įvairaus lygio žaidėjais.</span><span lang="en">Drop in and play with players of every level.</span></p>
         </div></li>
-        <li><span class="ico">🎯</span><div>
-          <h3><span lang="lt">Treniruotės</span><span lang="en">Coaching</span></h3>
-          <p><span lang="lt">Grupinės treniruotės jaunimui ir suaugusiems.</span><span lang="en">Group sessions for juniors and adults.</span></p>
+        <li><span class="ico">🤝</span><div>
+          <h3><span lang="lt">Bendruomenė</span><span lang="en">Community</span></h3>
+          <p><span lang="lt">Draugiška lietuviška kompanija prie stalo ir už jo.</span><span lang="en">Friendly Lithuanian company at the table and beyond.</span></p>
         </div></li>
         <li><span class="ico">🏆</span><div>
           <h3><span lang="lt">Turnyrai</span><span lang="en">Tournaments</span></h3>
@@ -124,45 +120,26 @@
     <div class="container">
       <p class="eyebrow"><span lang="lt">Kada atvykti</span><span lang="en">When to come</span></p>
       <h2><span lang="lt">Darbo laikas</span><span lang="en">Club hours</span></h2>
-      <div class="hours-grid">
-        <div class="day">
-          <h3><span lang="lt">Pirmadienis</span><span lang="en">Monday</span></h3>
-          <p class="closed"><span lang="lt">Uždaryta</span><span lang="en">Closed</span></p>
-        </div>
-        <div class="day">
-          <h3><span lang="lt">Antradienis</span><span lang="en">Tuesday</span></h3>
-          <p><span lang="lt">18:00 – 22:00</span><span lang="en">6:00 – 10:00 PM</span></p>
-          <small><span lang="lt">Laisvas žaidimas</span><span lang="en">Open play</span></small>
-        </div>
-        <div class="day">
-          <h3><span lang="lt">Trečiadienis</span><span lang="en">Wednesday</span></h3>
-          <p><span lang="lt">18:00 – 22:00</span><span lang="en">6:00 – 10:00 PM</span></p>
-          <small><span lang="lt">Treniruotės + laisvas žaidimas</span><span lang="en">Coaching + open play</span></small>
-        </div>
-        <div class="day">
-          <h3><span lang="lt">Ketvirtadienis</span><span lang="en">Thursday</span></h3>
-          <p><span lang="lt">18:00 – 22:00</span><span lang="en">6:00 – 10:00 PM</span></p>
-          <small><span lang="lt">Laisvas žaidimas</span><span lang="en">Open play</span></small>
-        </div>
-        <div class="day">
-          <h3><span lang="lt">Penktadienis</span><span lang="en">Friday</span></h3>
-          <p><span lang="lt">18:00 – 23:00</span><span lang="en">6:00 – 11:00 PM</span></p>
-          <small><span lang="lt">Lygos vakaras</span><span lang="en">League night</span></small>
-        </div>
-        <div class="day highlight">
-          <h3><span lang="lt">Šeštadienis</span><span lang="en">Saturday</span></h3>
-          <p><span lang="lt">10:00 – 16:00</span><span lang="en">10:00 AM – 4:00 PM</span></p>
-          <small><span lang="lt">Jaunimas · Turnyrai</span><span lang="en">Juniors · Tournaments</span></small>
-        </div>
-        <div class="day">
-          <h3><span lang="lt">Sekmadienis</span><span lang="en">Sunday</span></h3>
-          <p><span lang="lt">12:00 – 17:00</span><span lang="en">12:00 – 5:00 PM</span></p>
-          <small><span lang="lt">Laisvas žaidimas</span><span lang="en">Open play</span></small>
+      <div class="hours-card">
+        <ul class="week" aria-hidden="true">
+          <li><span lang="lt">Pr</span><span lang="en">Mon</span></li>
+          <li><span lang="lt">An</span><span lang="en">Tue</span></li>
+          <li><span lang="lt">Tr</span><span lang="en">Wed</span></li>
+          <li class="on"><span lang="lt">Kt</span><span lang="en">Thu</span></li>
+          <li><span lang="lt">Pn</span><span lang="en">Fri</span></li>
+          <li><span lang="lt">Š</span><span lang="en">Sat</span></li>
+          <li><span lang="lt">S</span><span lang="en">Sun</span></li>
+        </ul>
+        <div class="hours-main">
+          <h3><span lang="lt">Kiekvieną ketvirtadienį</span><span lang="en">Every Thursday</span></h3>
+          <p class="hours-time"><span lang="lt">19:00 – 21:00</span><span lang="en">7:00 – 9:00 PM</span></p>
+          <p><span lang="lt">Žaidimas visiems — pradedantiesiems ir patyrusiems žaidėjams.</span>
+             <span lang="en">Play for everyone — beginners and experienced players alike.</span></p>
         </div>
       </div>
       <p class="note">
-        <span lang="lt">Švenčių ir turnyrų dienomis darbo laikas gali keistis — žiūrėkite artėjančius renginius žemiau.</span>
-        <span lang="en">Hours may change on holidays and tournament days — check upcoming events below.</span>
+        <span lang="lt">Švenčių ir turnyrų dienomis laikas gali keistis — žiūrėkite artėjančius renginius žemiau.</span>
+        <span lang="en">Times may change on holidays and tournament days — check upcoming events below.</span>
       </p>
     </div>
   </section>
@@ -272,15 +249,15 @@
           <span lang="en">New players are always welcome. Your first visit is free!</span>
         </p>
         <ul class="contact-list">
-          <li><strong><span lang="lt">Adresas</span><span lang="en">Address</span></strong>Your club address, Chicago, IL</li>
+          <li><strong><span lang="lt">Adresas</span><span lang="en">Address</span></strong><a href="https://www.google.com/maps/search/?api=1&query=14911+E+127th+St,+Lemont,+IL+60439" target="_blank" rel="noopener">14911 E 127th St, Lemont, IL 60439</a></li>
           <li><strong><span lang="lt">El. paštas</span><span lang="en">Email</span></strong><a href="mailto:info@pingpongas.com">info@pingpongas.com</a></li>
           <li><strong><span lang="lt">Telefonas</span><span lang="en">Phone</span></strong>(000) 000-0000</li>
           <li><strong>Facebook</strong><a href="#">facebook.com/pingpongas</a></li>
         </ul>
       </div>
       <div class="map">
-        <!-- Replace q=Chicago with your club address -->
-        <iframe title="Map" loading="lazy" src="https://www.google.com/maps?q=Chicago,IL&output=embed"></iframe>
+        
+        <iframe title="Map" loading="lazy" src="https://www.google.com/maps?q=14911+E+127th+St,+Lemont,+IL+60439&output=embed"></iframe>
       </div>
     </div>
   </section>

@@ -21,8 +21,7 @@ Every piece of text in `index.html` is written twice, side by side:
 ```
 
 When you change something, change **both** versions. The LT / EN buttons at the top show one and hide the other.
-The first time someone visits, the page opens in Lithuanian if their browser is set to Lithuanian, otherwise in
-English; after that it remembers what they picked.
+The page opens in Lithuanian by default; if a visitor switches to English, it remembers that for next time.
 
 ## Adding photos
 

@@ -116,15 +116,20 @@ h3 { margin: 0 0 .25em; font-size: 1.05rem; }
 .ico { font-size: 1.8rem; line-height: 1; }
 
 /* Hours */
-.hours-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 1.5rem; }
-@media (min-width: 1100px) { .hours-grid { grid-template-columns: repeat(7, 1fr); } }
-@media (max-width: 560px) { .hours-grid { grid-template-columns: 1fr 1fr; } }
-.day { background: var(--ink-2); border: 1px solid rgba(255,255,255,.08); border-radius: var(--radius); padding: 20px; }
-.day h3 { color: var(--yellow); font-size: .85rem; text-transform: uppercase; letter-spacing: .1em; }
-.day p { margin: 0; font-weight: 700; font-size: 1.05rem; color: #fff; }
-.day small { opacity: .65; }
-.day .closed { color: #8a968f; }
-.day.highlight { background: var(--green); border-color: var(--green); }
+.hours-card {
+  margin-top: 1.5rem; padding: clamp(24px, 4vw, 40px); border-radius: var(--radius);
+  background: linear-gradient(135deg, var(--green), #0b3d2a); box-shadow: 0 20px 50px rgba(0,0,0,.35);
+  display: grid; gap: 28px;
+}
+.week { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(7, 1fr); gap: 8px; }
+.week li {
+  text-align: center; padding: 10px 0; border-radius: 10px; font-weight: 700; font-size: .85rem;
+  background: rgba(255,255,255,.08); color: rgba(255,255,255,.45);
+}
+.week li.on { background: var(--yellow); color: var(--ink); box-shadow: 0 6px 18px rgba(253,185,19,.4); }
+.hours-main h3 { color: var(--yellow); font-size: .9rem; text-transform: uppercase; letter-spacing: .12em; margin-bottom: .4em; }
+.hours-main .hours-time { font-family: "Oswald", sans-serif; font-weight: 600; font-size: clamp(2.6rem, 8vw, 4.2rem); line-height: 1; color: #fff; margin: 0 0 .3em; }
+.hours-main p { margin: 0; opacity: .9; }
 .note { opacity: .6; font-size: .9rem; margin-top: 1.5rem; }
 
 /* Events */
