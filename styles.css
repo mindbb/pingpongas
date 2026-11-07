@@ -160,6 +160,10 @@ h3 { margin: 0 0 .25em; font-size: 1.05rem; }
 .date span { display: block; font-size: .75rem; font-weight: 700; letter-spacing: .15em; color: var(--yellow); }
 .date strong { font-family: "Oswald", sans-serif; font-size: 2.1rem; font-weight: 600; line-height: 1; }
 .event p { margin: 0 0 .4em; color: var(--muted); }
+.poster { max-width: 420px; margin: 28px auto 0; text-align: center; }
+.poster img { display: block; width: 100%; height: auto; border-radius: var(--radius); box-shadow: var(--shadow); }
+.poster figcaption { margin-top: 12px; font-weight: 600; }
+.poster figcaption a { color: var(--green); }
 .meta { list-style: none; padding: 0; margin: 0; display: flex; gap: 16px; font-size: .85rem; font-weight: 600; color: var(--red); }
 
 /* Results table */
