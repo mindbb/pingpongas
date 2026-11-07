@@ -176,6 +176,9 @@ h3 { margin: 0 0 .25em; font-size: 1.05rem; }
 .gallery { display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: 320px; gap: 14px; margin-top: 1.5rem; }
 .gallery figure { position: relative; margin: 0; border-radius: var(--radius); overflow: hidden; background: var(--tint); }
 .gallery .g-wide { grid-column: span 2; }
+.g-row { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.g-row-3 { grid-template-columns: 1fr 1fr 1fr; }
+.g-row-set { grid-template-columns: 3fr 5fr 5fr; } /* portrait + two landscape photos */
 .gallery a { display: block; height: 100%; }
 .gallery img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s; }
 .gallery figure:hover img { transform: scale(1.04); }
@@ -223,6 +226,8 @@ h3 { margin: 0 0 .25em; font-size: 1.05rem; }
 @media (max-width: 480px) {
   .gallery { grid-template-columns: 1fr; grid-auto-rows: 260px; }
   .gallery .g-wide { grid-column: auto; }
+  .g-row { grid-template-columns: 1fr; grid-column: auto; grid-auto-rows: 260px; grid-row: span 2; }
+  .g-row-3, .g-row-set { grid-row: span 3; }
 }
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; }
